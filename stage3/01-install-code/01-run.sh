@@ -6,5 +6,8 @@ on_chroot << EOF
 
         cd /opt/blahaj
 
-        NODE_VERSION=18 NODE_ENV=production /root/.nvm/nvm-exec npm i
+        npm i
+        npm run build
+
+        find . -type f -name '*.ts' -delete
 EOF

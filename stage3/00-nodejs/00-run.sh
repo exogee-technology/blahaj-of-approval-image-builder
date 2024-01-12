@@ -1,8 +1,5 @@
 #!/bin/bash -e
 
 on_chroot << EOF
-        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-	source ~/.bashrc
-
-	nvm install 18
+	curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s 18
 EOF

@@ -6,8 +6,7 @@ Type=simple
 Restart=on-failure
 DynamicUser=yes
 WorkingDirectory=/opt/blahaj
-Environment=NODE_VERSION=18 NODE_ENV=production
-ExecStart=/root/.nvm/nvm-exec npm start
+ExecStart=node src/index.js
 
 [Install]
 WantedBy=multi-user.target
