@@ -4,10 +4,10 @@ Description=Blahaj of Approval
 [Service]
 Type=simple
 Restart=on-failure
-User=root
-Group=root
-WorkingDirectory=/root/blahaj-of-approval
-ExecStart=npm start
+DynamicUser=yes
+WorkingDirectory=/opt/blahaj
+Environment=NODE_VERSION=18 NODE_ENV=production
+ExecStart=/root/.nvm/nvm-exec npm start
 
 [Install]
 WantedBy=multi-user.target

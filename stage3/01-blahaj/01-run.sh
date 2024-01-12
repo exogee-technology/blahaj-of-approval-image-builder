@@ -1,11 +1,10 @@
 #!/bin/bash -e
 
 on_chroot << EOF
-        cd
-        git clone --depth 1 https://github.com/exogee-technology/blahaj-of-approval.git
+        cd /opt
+        git clone --depth 1 https://github.com/exogee-technology/blahaj-of-approval.git blahaj
 
-        cd ~/blahaj-of-approval
+        cd /opt/blahaj
 
-        source ~/.bashrc
-        npm i
+        NODE_VERSION=18 NODE_ENV=production /root/.nvm/nvm-exec npm i
 EOF
